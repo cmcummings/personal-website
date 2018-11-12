@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gestalt</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 
-<body>
-    
+<body style="height:200vh;">
+    {% include 'blog/header.html' %}
 
     {% block content %}
     {% endblock %}
 
+    {% include 'blog/footer.html' %}
 </body>
 
 </html>
