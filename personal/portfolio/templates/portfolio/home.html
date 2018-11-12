@@ -1,9 +1,86 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
 
 {% block content %}
 
-<main class="container mt-5">
 
-</main>
+<img class="position-absolute" style="width:100%; left:0; top:-25%; z-index: -1;" src="{% static 'img/bg.gif' %}">
+<!-- ff529c -->
+<div class="bg-pitch-dark">
+    <div class="container mt-5" style="min-height: 100vh;">
+        <div class="row no-gutters pt-5" style="margin-top:100%">
+            <!-- Sidebar -->
+            <div class="sticky-top col-3 text-right pr-4 text-light">
+                <h5 class="text-light n-h-u d-block mt-1">Connor Cummings</h5>
+                <div class="my-2">{% include 'portfolio/social.html' %}</div> 
+                <a class="text-light n-h-u d-block mt-1" href="#about-me">About Me</a>
+                <a class="text-light n-h-u d-block mt-1" href="#projects">Projects</a>
+                <a class="text-light n-h-u d-block mt-1" href="#skills">Skills</a>
+            </div>
+
+            <!-- Content -->
+            <div data-spy="scroll" class="col-8 ml-4">
+                <div class="mb-5" id="#about-me">
+                    <h1 class="text-light border-left border-light pl-4 mb-4">About Me</h1>
+                    <div class="pl-4">
+                        <div class="media">
+                            <img style="width:300px; height:300px" class="align-self-start mr-3 border" src="{% static 'img/portrait.jpeg' %}"
+                                alt="Portrait">
+                            <div class="media-body">
+                                <p>Hello! My name is Connor Matthew Cummings.</p>
+                                <p>I am a <b>Software Developer</b> based in Chicago, Illinois.</p>
+                                <p>I have been coding since middle school and have never lost interest since. I enjoy
+                                    challenging myself and learning new things.</p>
+                                <p>I love video games, metal, synthwave, sci-fi, cyberpunk, medieval, and fantasy.</p>
+                                <div class="align-bottom position-relative">
+                                    {% include 'portfolio/social.html' %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5" id="#projects">
+                    <h1 class="text-light border-left border-light pl-4 mb-4">Projects</h1>
+                    <div class="pl-4">
+                        <p>These are projects that I have been involved in or individually developed. <br>
+                            Other side projects can be found at my <a class="text-danger" href="https://github.com/gestalt8003">GitHub</a>
+                            page.</p>
+                    </div>
+                </div>
+
+                <div class="mb-5" id="#skills">
+                    <h1 class="text-light border-left border-light pl-4 mb-4">Skills</h1>
+                    <div class="pl-4">
+                        <p>These are skills that I have experience with.
+                            <br>>> (+) marks skill level/comfortability.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="text-light">Languages</h5>
+                                <ul>
+                                    <li>Java (++)</li>
+                                    <li>Python (+)</li>
+                                    <li>PHP</li>
+                                    <li>C#</li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <h5 class="text-light">Frameworks/Libraries</h5>
+                                <ul>
+                                    <li>Django (+)</li>
+                                </ul>
+                                <h5 class="text-light">Workflow/Other</h5>
+                                <ul>
+                                    <li>Slack/Discord (++)</li>
+                                    <li>Git (+)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

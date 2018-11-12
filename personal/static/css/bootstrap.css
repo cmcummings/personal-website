@@ -182,6 +182,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* No hover underline */
+.n-h-u:hover {
+  text-decoration: none;
+}
+
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -6502,6 +6507,16 @@ a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important;
+}
+
+.bg-pitch-dark {
+  background-color: #000000 !important;
+}
+
+a.bg-pitch-dark:hover, a.bg-pitch-dark:focus,
+button.bg--pitch-dark:hover,
+button.bg--pitchdark:focus {
+  background-color: #111111 !important;
 }
 
 .bg-white {
